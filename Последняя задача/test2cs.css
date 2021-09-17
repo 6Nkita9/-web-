@@ -1,0 +1,70 @@
+
+#rectangle {
+    width: 1000px;
+    height: 1120px;
+    background: lightgrey;
+    border-radius: 4%;
+    
+    
+}
+
+.hp1 {
+    font-size: 65px;
+
+}
+
+#rectangle p{
+    color:black;
+    
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 200%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-emphasis: center;
+
+}
+.rp1 {
+    width: 300px; 
+    color: #000000;
+}
+
+.fields {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.radio {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.fields {
+    display: block;
+    text-align: left;
+    width: 400px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.button {
+    font-size: 100%;
+    background-color: #6ba2ce;
+    color: white;
+    border: 0px solid;
+    border-radius: 4px;
+    height: 40px;
+    width: 100px;
+  }
+
+
+
+
