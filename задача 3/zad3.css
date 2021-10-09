@@ -1,0 +1,72 @@
+#nach {
+    width: 300px;
+    height: 315px;
+    background: rgb(221, 221, 221);
+    border-radius: 4%;
+    
+    
+}
+
+#sled{
+    width: 300px;
+    height: 40px;
+    background: rgb(221, 221, 221);
+    border-radius: 4%; 
+}
+
+.hp1 {
+    font-size: 24px;
+
+}
+
+
+.Name{
+    position: relative;
+    left: -40px;
+   
+}
+
+.Pass{
+    position: relative;
+    left: -40px;
+    
+}
+
+.GIT{
+    position: relative;
+    left: -10px;
+    vertical-align: middle;
+    height:5px;
+}
+
+.SL{
+    position: relative;
+    left: -5px;
+    vertical-align: middle;
+    height:5px;
+}
+
+.P11{
+    position: relative;
+    left: 34px;
+    height:20px;
+}
+
+.mb-3 {
+    font-size: 86%;  
+    color: rgb(0, 0, 0);
+    height: 80px;
+    width: 250px;
+  }
+
+.cartinka{
+    height: 80px;
+    width: 100px;
+  }
+
+
+
+
+
+
+
