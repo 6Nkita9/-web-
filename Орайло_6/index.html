@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/style1.css">
+    <title>seminar№6</title>
+  </head>
+  <body>
+    <div id="app"> </div>
+    <div id="btn"> </div>
+
+    <div class="like_button_container" data-commentid="2"></div>
+    <img class="d-block w-100" src="https://i.ytimg.com/vi/S1pTzsioB30/hqdefault.jpg" alt="">
+    &nbsp;
+    
+    <script type="text/babel">
+      class Hello extends React.Component {
+        render() {
+          return <div>
+                  <p>Имя: {this.props.name}</p>
+                  <p>Фамилия: {this.props.name1}</p>
+                  <p>Отчество: {this.props.name2}</p>
+                  <p>Возраст: {this.props.age}</p>
+          </div>;
+        }
+      }
+      ReactDOM.render(
+              <Hello name="Nikita" name1="Oraylo" name2="Ruslanovich" age="20" />,
+              document.getElementById("app")
+          )
+      class ClickButton extends React.Component {
+          constructor(props) {
+            super(props);
+            this.state = {class: "off", label: "Нажми"};
+            this.press = this.press.bind(this);
+          }
+          press(){
+            let className = (this.state.class==="off")?"on":"off";
+            this.setState({class: className});
+
+          }
+          render() {
+            return <button onClick={this.press} className={this.state.class}>{this.state.label}</button>;
+          }
+      }
+      ReactDOM.render(
+          <ClickButton />,
+          document.getElementById("btn")
+      )
+    </script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+  </body>
+</html>
