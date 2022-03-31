@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Акции</title>
+  </head>
+  <body>
+
+    <div id="app"> </div>
+    <div id="timer-overall"> </div>
+    <div id="container"> </div>
+    <div id="img1"> </div>
+    <div id="btn_buy" onclick="plusOne()"> </div>
+    <div id="notif"> </div>
+    <div id="amount_ydx"></div>
+    <div id="tim1"> </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+    <script type="text/babel">
+      ReactDOM.render(
+          <h1>Сайт Акций</h1>,
+          document.getElementById("app")
+      )
+    
+      class Hello extends React.Component {
+        render() {
+          return <h2>Акции Tesla</h2>;
+        }
+      };
+      ReactDOM.render(
+        <Hello />,
+        document.getElementById("container")
+      );
+
+      //timer
+      class Timer extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { seconds: 0 };
+        }
+
+        tick() {
+          this.setState(state => ({
+            seconds: state.seconds + 1
+          }));
+        }
+
+        componentDidMount() {
+          this.interval = setInterval(() => this.tick(), 1000);
+        }
+
+        componentWillUnmount() {
+          clearInterval(this.interval);
+        }
+
+        render() {
+          return (
+            <div>
+              Вы на сайте уже {this.state.seconds} секунд
+            </div>
+          );
+        }
+      }
+
+      //timer1
+      class Timer1 extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { seconds: 600 };
+        }
+
+        tick() {
+          this.setState(state => ({
+            seconds: state.seconds - 1
+          }));
+        }
+
+        componentDidMount() {
+          this.interval = setInterval(() => this.tick(), 1000);
+        }
+
+        componentWillUnmount() {
+          clearInterval(this.interval);
+        }
+
+        render() {
+          return (
+            <div>
+              Осталось времени для покупки: {this.state.seconds} секунд
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <Timer />,
+        document.getElementById('timer-overall')
+      );
+
+      ReactDOM.render(
+          <img src='grafik.png'></img>,
+          document.getElementById("img1")
+      )
+
+      ReactDOM.render(
+          <button>Купить</button>,
+          document.getElementById("btn_buy")
+      )
+
+      var number = 0;
+      ReactDOM.render(
+          <p>Вы купили акций: </p>,
+          document.getElementById("notif")
+      )
+      ReactDOM.render(
+          <p>{number}</p>,
+          document.getElementById("amount_ydx")
+      );
+
+      ReactDOM.render(
+        <Timer1 />,
+        document.getElementById('tim1')
+      );
+
+
+      function plusOne() {
+        var count = document.getElementById('amount_ydx');
+        number++;
+        count.textContent = number.toString();
+      }
+    </script>
+
+  </body>
+</html>
